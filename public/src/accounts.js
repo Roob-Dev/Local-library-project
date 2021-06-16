@@ -11,7 +11,7 @@ function sortAccountsByLastName(accounts) {
 function getTotalNumberOfBorrows(account, books) {
   const accountId = account.id;
   let counter = 0;
-//anonymous function to check 
+//anonymous function to check the borrows object
   books.forEach(book => 
     book.borrows.forEach(borrowed => {
       //check to see if the account id matches borrows.id, if so add 1 to the counter
@@ -22,11 +22,12 @@ function getTotalNumberOfBorrows(account, books) {
 
 function getBooksPossessedByAccount(account, books, authors) {
   const accountId = account.id;
-
+//
   let checkedOut = books.filter((book) => book.borrows.some(loaned => 
     !loaned.returned && loaned.id === accountId)
   );
-
+  //using the checkedOut array, check to see if the author ID matches in 
+  //author.id as well as book.authorId
     checkedOut.forEach(book => 
       book.author = authors.find(author => book.authorId === author.id)
     );
