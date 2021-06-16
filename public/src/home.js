@@ -58,7 +58,7 @@ const popBooks = mappedBooks.sort((genA, genB) =>
 }
 //this is my helper function which takes in an array and
 //returns only the first 5 values
-function slicer(incoming){
+function _slicer(incoming){
   return incoming.slice(0,5);
 }
 
