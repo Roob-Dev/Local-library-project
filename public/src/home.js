@@ -35,7 +35,7 @@ genreCounts[name]
 let sortedGenres = genres.sort((genA, genB) =>
   genA.count < genB.count ? 1: -1)
   //slice the sorted array to only return the top 5
-  return slicer(sortedGenres);
+  return _slicer(sortedGenres);
 }
 
 
@@ -53,7 +53,7 @@ reduBooks[title]
 )
 const popBooks = mappedBooks.sort((genA, genB) =>
   genA.count < genB.count ? 1: -1);
-  return slicer(popBooks);
+  return _slicer(popBooks);
 
 }
 //this is my helper function which takes in an array and
